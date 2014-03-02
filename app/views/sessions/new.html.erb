@@ -1,0 +1,15 @@
+<% provide(:title, "Iniciar Sesion")%>
+<div class="row">
+  <div class="small-11 small-centered columns">
+	  <h1>Iniciar Sesion</h1>
+	  <%= form_for(:session, url: sessions_path) do |f| %>
+	  <%= f.label :email%>
+	  <%= f.text_field :email%>
+	  
+	  <%= f.label :password %>
+	  <%= f.password_field :password %>
+	  <%= f.submit "Iniciar Sesion", class:"button" %>
+	  <% end %>
+	  <p>¿Nuevo Usuario? <%= link_to "¡Registrese ahora!", signup_path %>
+  </div>
+</div>
