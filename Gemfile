@@ -6,7 +6,7 @@ ruby '2.0.0'
 gem "rails", "~> 4.0.3"
 #FrameWork CSS Foundation 5
 gem 'foundation-rails', '5.0.3.1'
-gem 'bcrypt-ruby','3.1.2'
+gem 'bcrypt-ruby'
 
 group :development do
   gem 'rails_layout'
