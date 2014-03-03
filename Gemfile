@@ -7,9 +7,17 @@ gem "rails", "~> 4.0.3"
 #FrameWork CSS Foundation 5
 gem 'foundation-rails', '5.0.3.1'
 gem 'bcrypt-ruby'
+gem 'ruby-lol'
+gem 'figaro'
+gem 'faker'
+
+gem 'will_paginate'
+gem 'foundation-will_paginate'
+
 
 group :development do
   gem 'rails_layout'
+  gem 'quiet_assets'
 end
 group :development, :test do
 # Use sqlite3 as the database for Active Record

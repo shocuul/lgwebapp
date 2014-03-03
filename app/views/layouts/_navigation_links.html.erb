@@ -2,12 +2,12 @@
 
 		<li><%= link_to 'Help', help_path %></li>
 		<% if signed_in?%>
-			<li><%= link_to "Usuario", '#' %></li>
+			<li><%= link_to "Usuarios", users_path %></li>
 			<li class="has-dropdown">
 				<a href="#"> Cuenta </a>
 				<ul class="dropdown">
 					<li><%= link_to "Perfil", current_user %></li>
-					<li><%= link_to "Configuracion", '#' %></li>
+					<li><%= link_to "Configuracion", edit_user_path(current_user) %></li>
 					<li class="divider"></li>
 				<li><%= link_to "Cerrar Sesion", signout_path, method: "delete"%></li>	
 				</ul>
