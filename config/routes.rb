@@ -1,5 +1,6 @@
 Lgwebapp::Application.routes.draw do
-  resources :news
+  mount Ckeditor::Engine => '/ckeditor'
+  resources :posts
   resources :users
   resources :sessions, only:[:new, :create, :destroy]
   match '/signup', to: 'users#new', via: 'get'

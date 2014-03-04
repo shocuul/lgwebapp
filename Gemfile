@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 4.0.3"
@@ -10,10 +10,14 @@ gem 'bcrypt-ruby'
 gem 'ruby-lol'
 gem 'figaro'
 gem 'faker'
+gem 'simple_form'
 
 gem 'will_paginate'
 gem 'foundation-will_paginate'
 
+gem "paperclip", "~> 4.1"
+gem "paperclip-dropbox", ">= 1.1.7"
+gem 'ckeditor'
 
 group :development do
   gem 'rails_layout'
@@ -49,6 +53,8 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+
+gem 'jquery-turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
