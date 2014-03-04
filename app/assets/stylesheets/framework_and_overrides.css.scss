@@ -56,6 +56,7 @@ section {
 
   /* miscellaneous */
 
+
   .debug_dump {
     clear: both;
     float: left;
@@ -70,4 +71,17 @@ section {
 	    // Sets the font color based on the darkness of the bg & resets header line-heights for panels. Default: $panel-header-adjust
 	    $adjust:true
 	  );
+  }
+
+  .users{
+    list-style:none;
+    margin:0;
+    li{
+      overflow: auto;
+      padding: 10px 0;
+      border-top: 1px solid blue;
+      &:last-child{
+        border-bottom: 1px solid blue;
+      }
+    }
   }

@@ -1,0 +1,7 @@
+<% provide(:title, 'Todos los usuarios') %>
+<h1>Todos Los Usuarios</h1>
+<%= foundation_paginate @users %>
+<ul class="users">
+	<%= render @users %>
+</ul>
+<%= foundation_paginate @users %>
