@@ -48,12 +48,7 @@ class UsersController < ApplicationController
 
   #filtros antes de hacer una accion
 
-  def signed_in_user
-    unless signed_in?
-      store_location
-      redirect_to signin_url, notice: "Favor de iniciar sesion"
-    end
-  end
+  
 
   def correct_user
     @user = User.find(params[:id])

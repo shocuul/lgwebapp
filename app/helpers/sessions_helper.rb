@@ -10,6 +10,12 @@ module SessionsHelper
    def signed_in?
     !current_user.nil?
   end
+
+  def user_admin?
+    unless current_user.admin?
+      redirect_to root_url, warning: "No tienes los privilegios para hacer esta accion"
+    end
+  end
   
    def current_user
     @current_user     # Useless! Don't use this line.
@@ -26,6 +32,13 @@ module SessionsHelper
 
   def current_user?(user)
     user == current_user
+  end
+
+  def signed_in_user
+    unless signed_in?
+      store_location
+      redirect_to signin_url, notice: "Favor de iniciar sesion"
+    end
   end
 
   def sign_out

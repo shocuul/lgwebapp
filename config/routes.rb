@@ -1,4 +1,5 @@
 Lgwebapp::Application.routes.draw do
+  resources :news
   resources :users
   resources :sessions, only:[:new, :create, :destroy]
   match '/signup', to: 'users#new', via: 'get'
