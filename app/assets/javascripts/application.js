@@ -9,13 +9,12 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//= require ckeditor/init
+//
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
-//= require foundation
-$(function(){ $(document).foundation(); });
 //= require turbolinks
+//= require foundation
 //= require_tree .
-
-
+$(function() {
+  $(document).foundation();
+});

@@ -1,19 +1,10 @@
 <%# add navigation links to this file %>
-
-		<li><%= link_to 'Help', help_path %></li>
-		<li><%= link_to "Noticias", posts_path %></li>
-		<% if signed_in?%>
-			<li><%= link_to "Usuarios", users_path %></li>
-			<li class="has-dropdown">
-				<a href="#"> Cuenta </a>
-				<ul class="dropdown">
-					<li><%= link_to "Perfil", current_user %></li>
-					<li><%= link_to "Configuracion", edit_user_path(current_user) %></li>
-					<li class="divider"></li>
-				<li><%= link_to "Cerrar Sesion", signout_path, method: "delete"%></li>	
-				</ul>
-			</li>
-			<% else %>
-			<li><%= link_to "Iniciar Sesion", signin_path %></li>
-			<% end %>
-
+ <li class="active"><a href="#">Right Button Active</a></li>
+<li><a href="#">Left Nav Button</a></li>
+<li class="has-dropdown">
+        <a href="#">Right Button Dropdown</a>
+        <ul class="dropdown">
+          <li><a href="#">First link in dropdown</a></li>
+        </ul>
+      </li>
+<li><a href="#">Left Nav Button</a></li>

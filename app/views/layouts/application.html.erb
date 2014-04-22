@@ -2,32 +2,26 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= full_title(yield(:title)) %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "LateGame" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Lgwebapp" %>">
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%# Modernizr is required for Zurb Foundation %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-
     <%= csrf_meta_tags %>
-	<%= render 'layouts/shim' %>
   </head>
   <body>
-    <%= javascript_include_tag "application" %>
+    <div class="row">
+      
+    
     <header>
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
        <%= render 'layouts/messages' %>
        <%= yield %>
-	   <%= debug(params) if Rails.env.development?%>
-     <a href="#" data-dropdown="hover1" data-options="is_hover:true">Has Hover Dropdown</a>
-
-<ul id="hover1" class="f-dropdown" data-dropdown-content>
-  <li><a href="#">This is a link</a></li>
-  <li><a href="#">This is another</a></li>
-  <li><a href="#">Yet another</a></li>
-</ul>
     </main>
+  
+    </div>
   </body>
 </html>

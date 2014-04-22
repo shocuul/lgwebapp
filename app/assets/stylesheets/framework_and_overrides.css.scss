@@ -1,5 +1,37 @@
 // import the CSS framework
+$color-primario: #ff8000;
+
+$topbar-bg: #ffffff;
+$topbar-height: 25px;
+$topbar-link-color: #000000;
+$topbar-link-color: #000;
+$topbar-link-color-hover: #000;
+$topbar-link-color-active: #000;
+$topbar-link-color-active-hover: #000;
+$topbar-menu-link-color: #000;
+$topbar-link-font-size: rem-calc(16);
+
+$topbar-link-bg-active: $color-primario;
+$topbar-link-font-family: helvetica,arial;
+$topbar-link-bg-hover: $color-primario;
+$topbar-arrows: false;
+
+//Reescritura de variables del nav
+
+
+
+
 @import "foundation";
+body{
+  background-image:image-url("lategame.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+}
 
 // override for the 'Home' navigation link
 .top-bar .name {
@@ -15,6 +47,7 @@
 @mixin twelve-columns {
   @extend .small-12;
   @extend .columns;
+  @extend .small-centered;
   }
 @mixin six-columns-centered {
   @extend .small-6;
@@ -39,49 +72,29 @@
 // apply styles to HTML elements
 // to make views framework-neutral
 main {
-  @include twelve-columns;
+  @extend twelve-columns;
   background-color: #eee;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   }
 section {
   @extend .row;
   margin-top: 20px;
   }
-  
-  // Custom css
-  @mixin box_sizing {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  /* miscellaneous */
-
-
-  .debug_dump {
-    clear: both;
-    float: left;
-    width: 100%;
-    margin-top: 45px;
-
-	@include panel(
-	    // Sets the panel background color. Default: $panel-pg
-	    $bg:gray,
-	    // Sets the panel padding amount. Default: $panel-padding
-	    $padding:20px,
-	    // Sets the font color based on the darkness of the bg & resets header line-heights for panels. Default: $panel-header-adjust
-	    $adjust:true
-	  );
-  }
-
-  .users{
-    list-style:none;
-    margin:0;
-    li{
-      overflow: auto;
-      padding: 10px 0;
-      border-top: 1px solid blue;
-      &:last-child{
-        border-bottom: 1px solid blue;
-      }
-    }
-  }
+.row{
+  background-color: white;
+}
+#container{
+  @include grid-column(
+    $columns:12,
+    $center:true,
+    $collapse:true);
+}
+#top-banner{
+  margin: 10px 40px 0px 0px;
+  width: 468px;
+  float: right;
+  position: relative;
+}
+.top-bar{
+  margin: 1em;
+}

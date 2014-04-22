@@ -1,4 +1,21 @@
-== README
+== LATEGAME 
+== KAOSLATINGAMERS
+== 
+user.summoner
+
+==EXAMPLE 
+client.summoner.by_name("")
+summoner.name = shou
+summoner.id = 471973
+summoner.icon = 576 --> Arreglo de todos los iconos
+summoner.level = 24
+
+Model Mapas
+
+MapID Name Notes
+
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
